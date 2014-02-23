@@ -4,7 +4,7 @@ FROM ubuntu:13.10
 MAINTAINER cosmo0920 cosmo0920.wp@gmail.com
 
 # setting apt
-RUN echo "deb http://archive.ubuntu.com/ubuntu saucy main universe" > /etc/apt/sources.list
+RUN sed 's/main$/main universe/' -i /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get install -y build-essential git libpq-dev libsqlite3-dev haskell-platform
 
