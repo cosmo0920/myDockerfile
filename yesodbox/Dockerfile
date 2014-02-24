@@ -1,7 +1,7 @@
 # use the ubuntu base image provided by dotCloud
 FROM ubuntu:13.10
 
-MAINTAINER cosmo0920 cosmo0920.wp@gmail.com
+MAINTAINER cosmo0920 <cosmo0920.wp@gmail.com>
 
 # setting apt
 RUN sed 's/main$/main universe/' -i /etc/apt/sources.list
