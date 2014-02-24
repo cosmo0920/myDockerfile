@@ -33,3 +33,7 @@ ENV RBENV_VERSION 2.1.0
 # install bundler
 RUN gem install bundler
 RUN rbenv rehash
+
+# RUN SSHD AS THIS CONTAINER'S DEFAULT PROCESS
+CMD [ "/usr/sbin/sshd", "-D", "-o", "UseDNS=no", "-o", "UsePAM=no" ]
+EXPOSE 22
