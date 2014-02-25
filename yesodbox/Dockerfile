@@ -14,7 +14,8 @@ RUN cabal install cabal-install --global --prefix=/usr/local
 
 # Install yesod
 RUN cabal install yesod-platform yesod-bin persistent-postgresql persistent-sqlite \
-    -fllvm --global --prefix=/usr/local
+   yesod-markdown yesod-paginator \
+   -fllvm --global --prefix=/usr/local
 
 # RUN SSHD AS THIS CONTAINER'S DEFAULT PROCESS
 CMD [ "/usr/sbin/sshd", "-D", "-o", "UseDNS=no", "-o", "UsePAM=no" ]
